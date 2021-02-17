@@ -1,4 +1,4 @@
-@extends('layouts.updates-layout')
+@extends('layouts.admin-layout')
 
 @section('title', 'Update Category')
 

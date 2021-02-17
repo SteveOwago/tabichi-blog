@@ -1,4 +1,4 @@
-@extends('layouts.updates-layout')
+@extends('layouts.admin-layout')
 
 @section('title', 'Create Category')
 
@@ -19,7 +19,7 @@
     <form method="POST" action="/categories/create">
         {{ csrf_field() }}
             <div class="form-group">
-              <label for="exampleFormControlInput1">name</label>
+              <label for="exampleFormControlInput1">Title</label>
             <input name="name" type="text" class="form-control {{$errors->has('name') ? 'is-valid' : ''}}" id="exampleFormControlInput1" placeholder="Category Name" value="{{old('name')}}">
             </div>
             <button type="submit" class="btn btn-primary">Add Category</button>

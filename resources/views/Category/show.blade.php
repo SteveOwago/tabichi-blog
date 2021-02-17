@@ -1,4 +1,4 @@
-@extends('layouts.profile-layout')
+@extends('layouts.admin-layout')
 
 @section('title')
 Category: {{ $category->name }}
