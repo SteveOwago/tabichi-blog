@@ -23,7 +23,7 @@
             </span>
         </h1>
         <p>{{ $user->bio }}</p>
-        <a href="{{ $user->website }}">{{ $user->website }}</a>
+        <a target="_blank" href="{{ $user->website }}">{{ $user->website }}</a>
     </div>
 </div>
 
