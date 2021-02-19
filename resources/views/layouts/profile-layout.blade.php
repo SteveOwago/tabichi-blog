@@ -71,11 +71,6 @@
                     <a href="{{ route('login') }}" class="nav-link login-btn">Log in</a>
                 </li>
 
-                @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a href="{{ route('register') }}" class="nav-link register-btn">Register</a>
-                    </li>
-                @endif
                 @endguest
 
                 @auth

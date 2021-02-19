@@ -20,7 +20,10 @@ Route::patch('/categories/{category}', 'CategoryController@update');
 Route::get('/categories/{category}', 'CategoryController@destroy')->name('category.destroy');
 
 // Auth
-Auth::routes();
+Auth::routes(['register' => false]);
+// Add user
+Route::get('/user/create', 'UserController@adduser')->name('user.create');
+Route::post('/user/create', 'UserController@store')->name('user.store');
 
 // Profile
 Route::get('/profile/{user}/edit','UserController@edit')->name('profile.edit');

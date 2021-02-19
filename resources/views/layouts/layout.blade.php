@@ -70,12 +70,6 @@
                 <li class="nav-item">
                     <a href="{{ route('login') }}" class="nav-link login-btn">Log in</a>
                 </li>
-
-                @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a href="{{ route('register') }}" class="nav-link register-btn">Register</a>
-                    </li>
-                @endif
                 @endguest
 
                 @auth
@@ -145,15 +139,6 @@
     </div>
 
 
-
-    @guest
-    <div class="join-panel">
-        <h4 style="margin-bottom:30px;">Join to our beautiful blog</h4>
-        <a style="font-size:30px" class="login-btn" href="{{ route('login') }}">LOGIN</a>
-        <a style="font-size:30px" class="register-btn" href="{{ route('register') }}">Register</a>
-        <p style="margin-top:40px;">TO BE A MEMBER IN OUR BLOG AND CREATE YOUR OWN ARTICLES </p>
-    </div>
-    @endguest
 
 
     <!--Footer-->
