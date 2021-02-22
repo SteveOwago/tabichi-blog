@@ -1,7 +1,7 @@
 <?php
 
 // Articles
-Route::get('/', 'ArticleController@index')->name('article.home');
+//Route::get('/', 'ArticleController@index')->name('article.home');
 Route::get('/explore', 'ArticleController@explore')->name('article.explor');
 Route::get('/articles/create', 'ArticleController@create')->name('article.create');
 Route::post('/articles/create', 'ArticleController@store');
@@ -55,7 +55,12 @@ Route::post('/roles/new', 'UserController@storeRole');
 
 
 
-
+Route::get('/', 'TabichiController@index')->name('tabichi.index');
+Route::get('/tabichi/contact', 'TabichiController@contact')->name('tabichi.contact');
+Route::get('/tabichi/blog', 'TabichiController@blog')->name('tabichi.blog');
+Route::get('/tabichi/story', 'TabichiController@story')->name('tabichi.story');
+Route::get('/tabichi/testimonials', 'TabichiController@testimonials')->name('tabichi.testimonials');
+Route::get('/tabichi/about', 'TabichiController@about')->name('tabichi.about');
 
 
 

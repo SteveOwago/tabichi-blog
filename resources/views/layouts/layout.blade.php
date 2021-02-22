@@ -12,7 +12,7 @@
     <!-- Code Sample -->
     <link href="{{ asset('css/prism.css') }}" rel="stylesheet" />
 
-    <!--Fontawesom-->
+    <!--Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <!--bootstrap-->
@@ -84,8 +84,7 @@
                         <a class="dropdown-item" href="{{ route('profile.edit', ['user' => Auth::user()->id ]) }}">Edit your profile</a>
                         <a class="dropdown-item" href="{{ route('article.create') }}">Create article</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">Settings</a>
-                        <a class="dropdown-item" href="">Help</a>
+                       
 
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-dropdown" href="{{ route('logout') }}"
@@ -146,7 +145,7 @@
             <div class="container-fluid footer-content">
                 <span>By iEARN-KE</span>
             </div>
-        </div>
+    </div>
 
 
 
