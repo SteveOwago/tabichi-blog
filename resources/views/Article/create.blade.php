@@ -64,7 +64,7 @@
         <div class="form-group">
           <label for="exampleFormControlInput1">Source <small><i>(optional)</i></small>
           </label>
-          <input name="source" type="text" class="form-control {{$errors->has('source') ? 'is-valid' : ''}}" id="exampleFormControlInput1" placeholder="e.g www.dailymotion.com" value="{{old('source')}}">
+          <input name="source" type="text" required class="form-control {{$errors->has('source') ? 'is-valid' : ''}}" id="exampleFormControlInput1" placeholder="e.g www.dailymotion.com" value="{{old('source')}}">
         </div>
 
         <div class="form-group row">

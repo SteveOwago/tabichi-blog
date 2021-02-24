@@ -54,13 +54,13 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">Source</label>
-            <input name="source" for="source" type="text" class="form-control  {{$errors->has('source') ? 'is-valid' : ''}}" id="exampleFormControlInput1" placeholder="www.dailymotion.com" value="{{$article->source}}">
+            <input name="source" for="source" required type="text" class="form-control  {{$errors->has('source') ? 'is-valid' : ''}}" id="exampleFormControlInput1" placeholder="www.dailymotion.com" value="{{$article->source}}">
             </div>
 
             <div class="form-group row">
                 <div class="col-md-6">
                     <div class="custom-file">
-                        <input name="image" type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                        <input name="image" required type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                         <label class="custom-file-label" for="image">{{ $article->image }}</label>
                     </div>
                 </div>
