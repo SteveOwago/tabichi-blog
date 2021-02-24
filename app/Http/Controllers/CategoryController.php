@@ -60,7 +60,7 @@ class CategoryController extends Controller
     // Show the category and return all articles that are in the category
     public function show(category $category)
     {
-        return view('Category.show', compact('category'));
+        return view('category.show', compact('category'));
     }
 
     public function edit(category $category)

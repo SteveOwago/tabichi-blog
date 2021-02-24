@@ -1,11 +1,14 @@
-@extends('layouts.post-layout')
+@extends('layouts.home-layout')
 
 @section('title')
     {{$article ->title}}
 @endsection
 
 @section('content')
-    @if ($article->image != null)
+<div class="container justify-content-center" style="padding-top:10%;">
+    <div class="row">
+        <div class="col-md-10">
+        @if ($article->image != null)
     <div class="shadow" style="padding-top:20px; padding-bottom:20px; padding-left:20px; padding-right:20px; background:#fff;">
         <img src="/uploads/images/{{ $article->image }}" class="card-img-top" alt="{{ $article->title }}" sizes="(max-width: 1024px) 100vw, 1024px">
     </div>
@@ -66,6 +69,10 @@
         @endforeach
     </div>
     <br>
+        </div>
+    </div>
+</div>
+    
 @endsection
 
 <!-- @section('RightSide')

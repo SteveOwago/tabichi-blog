@@ -1,28 +1,30 @@
-@extends('layouts.admin-layout')
+@extends('layouts.home-layout')
 
 @section('title')
 Category: {{ $category->name }}
 @endsection
 
 @section('profile-details')
-<div class="profile-panel">
-    <div class="profile-panel">
-        <div class="col-auto">
+<div class="container" style="padding-top:10%;">
+        <div class="row">
+            <div class="col-md-12 justify-content-center">
+               <h1><i class="fas fa-hashtag a-2x text-gray-300"></i> Category : {{ $category->name }}</h1>
+        <p class="lead"><strong>There are {{ $category->articles->count() }} articles in {{ $category->name }}</strong></p>
+            </div>
         </div>
     </div>
-    <div>
-        <h1><i class="fas fa-hashtag a-2x text-gray-300"></i> Category : {{ $category->name }}</h1>
-        <p>There are {{ $category->articles->count() }} articles in {{ $category->name }}</p>
-    </div>
+    
 </div>
 
 
 @endsection
 
 @section('articles')
-    <div class="card-columns">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12 card-columns">
         @foreach ($category->articles as $article)
-        <div class="card mb-3 post-box shadow">
+        <div class="card mb-4 post-box shadow">
             @if ($article->image != null)
                 <img src="/uploads/images/{{ $article->image }}" class="card-img-top" alt="{{ $article->title }}" sizes="(max-width: 1024px) 100vw, 1024px">
             @endif
@@ -49,4 +51,7 @@ Category: {{ $category->name }}
         </div>
         @endforeach
     </div>
+</div>
 @endsection
+    </div>
+</div>

@@ -21,85 +21,38 @@
                 <!--Content Side / Blog Classic -->
                 <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12">
                 	<div class="blog-classic padding-right">
-
-                		<!-- News Block Three-->
-		                <div class="news-block-three">
-		                    <div class="inner-box">
-		                        <div class="image-box">
-		                            <figure class="image"><a href="blog-detail.html"><img src="images/resource/news-4.jpg" alt=""></a></figure>
-		                            <span class="date">15 FEB 2020</span>
-		                        </div>
-		                        <div class="lower-content">
-		                            <div class="post-meta">
-		                            	<ul class="post-info clearfix">
-			                                <li><a href="blog-detail.html">By : Peter</a></li>
-			                                <li><a href="blog-detail.html">Awards</a></li>
-			                                <li><a href="blog-detail.html">Comments: 8</a></li>
-			                            </ul>
-			                        </div>
-		                            <h3><a href="blog-detail.html">Global Teacher Prize</a></h3>
-		                            <div class="text">We are happy and greatly appreciate Bro Peter Tabichi for being the recipient of the prestigious Ahimsa Award 2020, courtesy of the Institute of Jainology.</div>
-			                        <div class="link-box"><a href="blog-detail.html" class="theme-btn read-more">Read more</a></div>
-		                        </div>
-		                    </div>
-		                </div>
-		                
-						<!-- News Block Three-->
-		                <div class="news-block-three">
-		                    <div class="inner-box">
-		                        <div class="image-box">
-		                            <figure class="image"><a href="blog-detail.html"><img src="images/resource/news-5.jpg" alt=""></a></figure>
-		                            <span class="date">15 FEB 2020</span>
-		                        </div>
-		                        <div class="lower-content">
-		                            <div class="post-meta">
-		                            	<ul class="post-info clearfix">
-			                                <li><a href="blog-detail.html">By : Peter</a></li>
-			                                <li><a href="blog-detail.html">Awards</a></li>
-			                                <li><a href="blog-detail.html">Comments: 8</a></li>
-			                            </ul>
-			                        </div>
-		                            <h3><a href="blog-detail.html">Global Teacher Prize</a></h3>
-		                            <div class="text">We are happy and greatly appreciate Bro Peter Tabichi for being the recipient of the prestigious Ahimsa Award 2020, courtesy of the Institute of Jainology.</div>
-			                        <div class="link-box"><a href="blog-detail.html" class="theme-btn read-more">Read more</a></div>
-		                        </div>
-		                    </div>
-		                </div>
-
-		                <!-- News Block Three-->
-		                <div class="news-block-three">
-		                    <div class="inner-box">
-		                        <div class="image-box">
-		                            <figure class="image"><a href="blog-detail.html"><img src="images/resource/news-6.jpg" alt=""></a></figure>
-		                            <span class="date">15 FEB 2020</span>
-		                        </div>
-		                        <div class="lower-content">
-		                            <div class="post-meta">
-		                            	<ul class="post-info clearfix">
-			                                <li><a href="blog-detail.html">By : Peter</a></li>
-			                                <li><a href="blog-detail.html">Awards</a></li>
-			                                <li><a href="blog-detail.html">Comments: 8</a></li>
-			                            </ul>
-			                        </div>
-		                            <h3><a href="blog-detail.html">Global Teacher Prize</a></h3>
-		                            <div class="text">We are happy and greatly appreciate Bro Peter Tabichi for being the recipient of the prestigious Ahimsa Award 2020, courtesy of the Institute of Jainology.</div>
-			                        <div class="link-box"><a href="blog-detail.html" class="theme-btn read-more">Read more</a></div>
-		                        </div>
-		                    </div>
-		                </div>
-
-		               
-						
+@foreach ($articles as $article)
+    <div class="card mb-3 post-box shadow">
+        @if ($article->image != null)
+            <img src="/uploads/images/{{ $article->image }}" class="card-img-top" alt="{{ $article->title }}" sizes="(max-width: 1024px) 100vw, 1024px">
+        @endif
+        <div class="card-body">
+            <div class="post-author-date">
+                <p class="post-date">By </p>
+                <a href="{{ route('profile', ['user' => $article->owner->id, 'slug' => $article->owner->slug ]) }}" class="post-author">{{ $article->owner->name }}</a>
+                <p class="post-date">{{ $article->created_at->toFormattedDateString() }}</p>
+            </div>
+            <a href="{{ route('article.show', ['article' => $article->id, 'slug' => $article->slug]) }}" class="post-title">
+                <h2 class="card-title">{{ $article->title }}</h2>
+            </a>
+            <p class="card-text post-body">{{ $article->description }}</p>
+            <hr>
+            <div class="post-cateories">
+                @if ($article->categories->count() != 0)
+                    <i style="margin-right:10px; color:gray; font-size:12px;" class="fas fa-tags"></i>
+                @endif
+                @foreach ($article->categories as $category)
+                    <a href="{{ route('category.show', ['category' => $category->id, 'slug' => $category->slug]) }}">{{ $category->name }}</a>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    @endforeach	
+	{{ $articles->links() }}
+	
 					</div>
-					
-					<!--Styled Pagination-->
-					<ul class="styled-pagination">
-						<li><a href="#" class="active">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-					</ul>                
-					<!--End Styled Pagination-->
-					
+				               
+					<!--End Styled Pagination-->	
 				</div>
 				
 				<!--Sidebar Side-->
@@ -122,12 +75,9 @@
                                 <h2>Categories</h2>
                             </div>
                             <ul class="cat-list">
-                                <li><a href="#">sports</a></li>
-                                <li><a href="#">tree planting</a></li>
-                                <li><a href="#">school activities</a></li>
-                                <li><a href="#">technology</a></li>
-                                <li><a href="#">news</a></li>
-                                <li><a href="#">school calender</a></li>
+                                @foreach($categories as $category)
+                                <li><a href="{{ route('category.show', ['category' => $category->id, 'slug' => $category->id]) }}"> {{$category->name}} </a></li>
+                                @endforeach
                             </ul>
                         </div>
                         

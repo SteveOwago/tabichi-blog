@@ -57,13 +57,22 @@ Route::post('/roles/new', 'UserController@storeRole');
 
 Route::get('/', 'TabichiController@index')->name('tabichi.index');
 Route::get('/tabichi/contact', 'TabichiController@contact')->name('tabichi.contact');
+Route::post('/tabichi/contact', 'ContactusController@store')->name('contact.store');
 Route::get('/tabichi/blog', 'TabichiController@blog')->name('tabichi.blog');
 Route::get('/tabichi/story', 'TabichiController@story')->name('tabichi.story');
 Route::get('/tabichi/testimonials', 'TabichiController@testimonials')->name('tabichi.testimonials');
 Route::get('/tabichi/about', 'TabichiController@about')->name('tabichi.about');
+// Route for contact us messages
+Route::get('/dashboard/messages', 'ContactusController@index')->name('contact.index');
 
-
-
+Route::get('/new/index', 'NewController@index')->name('new.index');
+Route::get('/new/create', 'NewController@create')->name('new.create');
+Route::post('/new/create', 'NewController@store')->name('new.store');
+Route::get('/new/show/{new}', 'NewController@show')->name('new.show');
+Route::get('/new/{new}/edit', 'NewController@edit')->name('new.edit');
+Route::patch('/new/{new}', 'NewController@update')->name('new.update');
+Route::get('/new/{news}/delete', 'NewController@destroy')->name('new.destroy');
+//Route::resource('New', 'NewController');
 
 
 
