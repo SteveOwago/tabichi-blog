@@ -80,8 +80,9 @@ class AdminController extends Controller
     }
 
     public function users(){
+        $id = Auth::user()->id;
         if(Auth::user()->isA('superadmin') || Auth::user()->isAn('editor')){
-            $users = User::orderBy('created_at', 'desc')->get();
+            $users = User::where('id','!=',$id)->orderBy('created_at', 'desc')->get();
             return view('Admin.users', compact('users'));
         }
         else{

@@ -95,8 +95,8 @@ class UserController extends Controller
 
     public function delete(User $user)
     {
-        $user->delete();
-        return redirect('/');
+        $user->delete($user);
+        return redirect()->back();
     }
 
     /**

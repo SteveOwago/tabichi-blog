@@ -28,7 +28,7 @@ Route::post('/user/create', 'UserController@store')->name('user.store');
 // Profile
 Route::get('/profile/{user}/edit','UserController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'UserController@update');
-Route::delete('/profile/{user}/delete','UserController@delete')->name('profile.destroy');
+Route::get('/profile/{user}/delete','UserController@delete')->name('profile.destroy');
 Route::get('/profile/{user}/{slug}', 'UserController@index')->name('profile');
 
 // Search

@@ -28,6 +28,7 @@
                 <th>Articles Count</th>
                 <th>View</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody id="myTable">
@@ -50,6 +51,14 @@
                                 <i class="fas fa-edit"></i>
                             </a>
                         </td>
+                        <td>
+                            <a href="{{ route('profile.destroy', ['user' => $user->id] ) }}" class="btn btn-danger btn-circle">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                     
+                       
+                       
                         
 
                     </tr>
