@@ -102,7 +102,7 @@ class NewController extends Controller
             $new = News::findorFail($id);
             return view('new.edit', compact('new'));
         }
-       
+        return abort(403);
     }
 
     /**
@@ -148,8 +148,8 @@ class NewController extends Controller
             $this->FlashMessage('NewsDeleted', 'Your News has been deleted [ Title: '. $news->title . ' ]');
             return redirect()->route('dashboard.home');
         }
-        // return '403' error if the user is not the article owner
-        return abort(403);
+        $this->FlashMessage('NewsNotDeleted', ' Unauthorised to Delete News!');
+         return redirect()->back();
     }
 
     

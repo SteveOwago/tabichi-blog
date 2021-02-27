@@ -97,7 +97,7 @@
 
                                             </li>
                                         @endauth
-                                        @guest<li><a href="{{ route('login') }}">Login</a></li>@endguest
+                                      
                                     </ul>
                                 </div>
                             </nav>
@@ -179,6 +179,7 @@
                                             <li><a href="#"><span class="fab fa-twitter"></span></a></li>
                                             <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
                                         </ul>
+                                         <div style="padding-top:10%;"> @guest<li><a href="{{ route('login') }}">Login</a></li>@endguest</div>
                                     </div>
                                 </div>
 

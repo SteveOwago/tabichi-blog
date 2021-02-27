@@ -37,7 +37,8 @@ class CategoryController extends Controller
             return view('Category.create');
         }
         else{
-            return abort(403);
+            $this->FlashMessage('Unauthorised', ' Unauthorised user Please Contact your Administrator!');
+            return redirect()->route('categories'); 
         }
     }
 
@@ -53,7 +54,8 @@ class CategoryController extends Controller
             return redirect('/dashboard/categories');
         }
         else{
-            return abort(403);
+            $this->FlashMessage('Unauthorised', ' Unauthorised user. Please Contact your Administrator!');
+            return redirect()->route('categories'); 
         }
     }
 
@@ -70,8 +72,8 @@ class CategoryController extends Controller
             $categories = category::all();
             return view('category.edit', compact('categories', 'category'));
         }
-        // return '403' error if the user is not the article owner
-        return abort(403);
+        $this->FlashMessage('Unauthorised', ' Unauthorised user. Please Contact your Administrator!');
+         return redirect()->route('categories'); 
     }
     public function update(category $category, Request $request)
     {
@@ -95,7 +97,8 @@ class CategoryController extends Controller
              $this->FlashMessage('CategoryDeleted', ' The Category' . $category->name.' has been deleted [ id: '. $category->id . ' ]');
              return redirect()->route('categories');
          }
-    
+         $this->FlashMessage('CategoryNotDeleted', ' Unauthorised to Delete Categories!');
+         return redirect()->route('categories');
      }
     /**
      * Validate category

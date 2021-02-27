@@ -87,7 +87,7 @@ class UserController extends Controller
                 $user->avatar = $filename;
                 $user->save();
             }
-            $user->update($this->ValidateUser());
+            $user->update($this->ValidateUserAdd());
             return redirect('/');
         }
         return abort('403');
@@ -105,7 +105,7 @@ class UserController extends Controller
     public function ValidateUserAdd(){
         return request()->validate([
             'name' => 'required|string|min:3|max:19',
-            'bio' => 'nullable|string|min:3|max:200',
+            'bio' => 'nullable|string|min:3|max:2000',
             'lives_in' => 'nullable|string|min:3|max:50',
             'from' => 'nullable|string|min:3|max:50',
             'works_at' => 'nullable|string|min:3|max:50',
@@ -119,7 +119,7 @@ class UserController extends Controller
     public function ValidateUser(){
         return request()->validate([
             'name' => 'required|string|min:3|max:19',
-            'email' => 'email|unique|required',
+            'email' => 'email|unique:users|required',
         ]);
     }
 

@@ -47,18 +47,18 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Articles -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('articles') }}">
-                    <i class="fas fa-poll-h"></i>
-                    <span>Articles</span></a>
-            </li>
-
             <!-- Nav Item - Categories -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('categories') }}">
                     <i class="fas fa-tags"></i>
                     <span>Categories</span></a>
+            </li>
+
+            <!-- Nav Item - Articles -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('articles') }}">
+                    <i class="fas fa-poll-h"></i>
+                    <span>Articles</span></a>
             </li>
 
             <!-- Nav Item - Users -->
@@ -240,6 +240,30 @@
                     @if (Session::has('NewsUpdate'))
                         <div class="alert alert-success alert-dismissible fade show session" role="alert">
                             {{ Session::get('NewsUpdate') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if (Session::has('CategoryNotDeleted'))
+                        <div class="alert alert-danger alert-dismissible fade show session" role="alert">
+                            {{ Session::get('CategoryNotDeleted') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if (Session::has('NewsNotDeleted'))
+                        <div class="alert alert-danger alert-dismissible fade show session" role="alert">
+                            {{ Session::get('NewsNotDeleted') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                     @if (Session::has('Unauthorised'))
+                        <div class="alert alert-danger alert-dismissible fade show session" role="alert">
+                            {{ Session::get('Unauthorised') }}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

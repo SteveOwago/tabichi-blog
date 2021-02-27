@@ -23,7 +23,7 @@ class AdminController extends Controller
     public function index()
     {
         // Only superadmin and editor can access this page
-        if(Auth::user()->isA('superadmin') || Auth::user()->isAn('editor')){
+        if(Auth::user()->isA('superadmin') || Auth::user()){
             // all articles in the blog
             $articles = article::all();
             $articlesCount = $articles->count();
@@ -49,7 +49,7 @@ class AdminController extends Controller
 
     public function articles()
     {
-        if(Auth::user()->isA('superadmin') || Auth::user()->isAn('editor')){
+        if(Auth::user()->isA('superadmin') || Auth::user()){
             $articles = article::orderBy('created_at', 'desc')->get();
             return view('Admin.articles', compact('articles'));
         }
@@ -59,7 +59,7 @@ class AdminController extends Controller
     }
 
     public function categories(){
-        if(Auth::user()->isA('superadmin') || Auth::user()->isAn('editor')){
+        if(Auth::user()->isA('superadmin') || Auth::user()){
             $categories = category::orderBy('created_at', 'desc')->get();
             return view('Admin.categories', compact('categories'));
         }
@@ -69,7 +69,7 @@ class AdminController extends Controller
 
     }
     public function roles(){
-        if(Auth::user()->isA('superadmin')){
+        if(Auth::user()->isA('superadmin')|| Auth::user() ){
             $roles = role::orderBy('created_at', 'desc')->get();
             return view('Admin.roles', compact('roles'));
         }
@@ -81,7 +81,7 @@ class AdminController extends Controller
 
     public function users(){
         $id = Auth::user()->id;
-        if(Auth::user()->isA('superadmin') || Auth::user()->isAn('editor')){
+        if(Auth::user()->isA('superadmin') || Auth::user()){
             $users = User::where('id','!=',$id)->orderBy('created_at', 'desc')->get();
             return view('Admin.users', compact('users'));
         }

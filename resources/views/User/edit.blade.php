@@ -32,8 +32,20 @@
                 <label for="bio">{{ __('Bio') }} <small><i>(optional)</i></small></label>
                     <textarea cols="20" rows="10" id="bio" type="text" class="form-control{{ $errors->has('bio') ? ' is-invalid' : '' }}" name="bio">{{ $user->bio }}</textarea>
             </div>
-
             <div class="form-group">
+                            <label for="email">{{ __('Email') }}<small><i>(required)</i></small></label>
+
+                           
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email Address" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            
+                        </div>
+            <div class="form-group col-md-6">
                 <div class="custom-file">
                     <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                     <label class="custom-file-label" for="avatar">{{ $user->avatar }}</label>

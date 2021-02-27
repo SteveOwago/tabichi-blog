@@ -15,7 +15,9 @@
                     <div class="auto-container">
                         <div class="content">
                             <h2>We are TABICHI FOUNDATION<br><strong>inspiring the future </strong></h2>
-                            <div class="text">we create and inspire aiming to a bright future</div>
+                            <div class="text">
+                                <h3 class="text-warning">We create and inspire aiming to a bright future<h3>
+                            </div>
                             <div class="btns-box">
                                 <a href="#" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
                             </div>
@@ -30,7 +32,10 @@
                     <div class="auto-container">
                         <div class="content">
                             <h2> Benefitting <br>The World</h2>
-                            <div class="text">We do innovation, creativity, effectiveness and all that with love.</div>
+                            <div class="text">
+                                <h3 class="text-warning">We do innovation, creativity, effectiveness and all that with love.
+                                </h3>
+                            </div>
                             <div class="btns-box">
                                 <a href="#" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
                             </div>
@@ -45,8 +50,11 @@
                     <div class="auto-container">
                         <div class="content">
                             <h2>Solution for <br> The Future</h2>
-                            <div class="text">Young people are at the centre of our work and their insight and aspirations
-                                guide us. We believe in respectful collaboration.</div>
+                            <div class="text">
+                                <h3 class="text-warning">Young people are at the centre of our work and their insight and
+                                    aspirations
+                                    guide us. We believe in respectful collaboration.</h3>
+                            </div>
                             <div class="btns-box">
                                 <a href="#" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
                             </div>
@@ -86,7 +94,7 @@
 
                         </div>
                     @endforeach
-				<div class="row">{{ $news->links()}}</div>
+                    <div class="row">{{ $news->links() }}</div>
                 </div>
         </section>
     @endif
@@ -114,7 +122,7 @@
                             </div>
                         </div>
                     @endforeach
-					<div class="row">{{ $news->links()}}</div>
+                    <div class="row">{{ $news->links() }}</div>
                 </div>
         </section>
     @endif
@@ -122,51 +130,54 @@
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
-        <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title-two centered">
-                <h2>What our customers says</h2>
-                <div class="title-text">Thousands of people done interior</div>
-            </div>
+        <div class="container-fluid">
 
-            <div class="testimonial-carousel owl-carousel owl-theme">
-
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image">
-                                    <img src="{{ asset('tabichi/images/resource/author-1.jpg') }}" />
-                                </div>
+            <div class="justify-content-center">
+               <div class="justify-content-center"> <h2>Our Programs</h2></div><hr><br>
+                {{-- Card Column --}}
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 30rem;min-height:300px;">
+                        <h5 class="card-title text-center">Innovation Techcamps</h5>
+                            <img class="card-img-top"  style="border-radius:50%;" src="{{ asset('tabichi/images/main-slider/13.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-warning">Learn More</a>
                             </div>
-                            <h3>Ms. Sarah</h3>
-                            <div class="title">Inspirational Team</div>
-                            <div class="text">I had stopped believing in myself. But you guys never stopped believing in me.
-                                That is why I started believing in myself. Thank you, guys, for being such a nice family.
+                        </div>
+                    </div>
+                    {{-- Card Column --}}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 30rem;min-height:300px;">
+                            <h5 class="card-title text-center">Social and Career Empowerment</h5>
+                            <img class="card-img-top"  style="border-radius:50%;"  src="{{ asset('tabichi/images/main-slider/13.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                                
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-warning">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Card Column --}}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 30rem;min-height:500px;max-height:500px;">
+                        <h5 class="card-title text-center">Promoting Equality</h5>
+                            <img class="card-img-top" src="{{ asset('tabichi/images/main-slider/13.jpg')}}" style="border-radius:50%;" alt="Equality Image">
+                            <div class="card-body">
+                                
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-warning">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image">
-                                    <img src="{{ asset('tabichi/images/resource/author-2.jpg') }}" />
-                                </div>
-                            </div>
-                            <h3>Mr Peter</h3>
-                            <div class="title">Helped Me when i was completely helpless</div>
-                            <div class="text">I stopped believing in myself. But you guys never stopped believing in me.
-                                That is why I started believing in myself. Thank you, guys, for being such a nice family.
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+
         </div>
     </section>
     <!-- End Testimonial Section -->
