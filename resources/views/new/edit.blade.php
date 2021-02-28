@@ -3,6 +3,7 @@
 @section('title', 'Edit News')
 
 <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=your_API_key"></script>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 <script>
   tinymce.init({
     selector: '#body',
@@ -50,7 +51,7 @@
 
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Body</label>
-            <textarea id="body" name="body" placeholder="Start writing here ..." for="body" class="form-control  {{$errors->has('body') ? 'is-valid' : ''}}" id="exampleFormControlTextarea1" rows="3">{{$new->body}}</textarea>
+            <textarea id="summary-ckeditor" name="body" placeholder="Start writing here ..." for="body" class="form-control  {{$errors->has('body') ? 'is-valid' : ''}}" id="exampleFormControlTextarea1" rows="3">{{$new->body}}</textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">Source</label>
@@ -76,4 +77,7 @@
             <button style="margin-top:5px;" type="submit" class="btn btn-danger"> Delete News </button>
         </form>
         <br><br>
+<script>
+CKEDITOR.replace( 'summary-ckeditor' );
+</script>
 @endsection

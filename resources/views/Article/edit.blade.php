@@ -3,6 +3,7 @@
 @section('title', 'Edit Article')
 
 <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=your_API_key"></script>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 <script>
   tinymce.init({
     selector: '#body',
@@ -35,7 +36,7 @@
         </ul>
     </div>
     @endif
-<form method="POST" action="/articles/{{ $article ->id }}">
+<form method="POST" action="/articles/{{ $article ->id }}" enctype="multipart/form-data">
         {{ method_field('PATCH')}}
         {{ csrf_field() }}
             <div class="form-group">
@@ -50,7 +51,7 @@
 
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Body</label>
-            <textarea id="body" name="body" placeholder="Start writing here ..." for="body" class="form-control  {{$errors->has('body') ? 'is-valid' : ''}}" id="exampleFormControlTextarea1" rows="3">{{$article->body}}</textarea>
+            <textarea id="summary-ckeditor" name="body" placeholder="Start writing here ..." for="body" class="form-control  {{$errors->has('body') ? 'is-valid' : ''}}" id="exampleFormControlTextarea1" rows="20">{{$article->body}}</textarea>
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">Source</label>
@@ -99,4 +100,8 @@
             <button style="margin-top:5px;" type="submit" class="btn btn-danger"> Delete Article </button>
         </form>
         <br><br>
+
+<script>
+CKEDITOR.replace( 'summary-ckeditor' );
+</script>
 @endsection

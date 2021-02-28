@@ -137,7 +137,7 @@
                 {{-- Card Column --}}
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:500px;">
+                        <div class="card" style="width: 98%;min-height:500px;">
                         <h4 class="card-title text-center text-warning">Innovation Techcamps</h4>
                             <img class="card-img-top"  style="border-radius:50%;" src="{{ asset('tabichi/images/main-slider/15.jpg')}}" alt="Card image cap">
                             <div class="card-body">
@@ -150,7 +150,7 @@
                     </div>
                     {{-- Card Column --}}
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:500px;">
+                        <div class="card" style="width: 98%;min-height:500px;">
                             <h4 class="card-title text-center text-warning">Social and Career Empowerment</h4>
                             <img class="card-img-top"  style="border-radius:50%;"  src="{{ asset('tabichi/images/main-slider/16.jpg')}}" alt="Card image cap">
                             <div class="card-body">
@@ -163,7 +163,7 @@
                     </div>
                     {{-- Card Column --}}
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:500px;">
+                        <div class="card" style="width: 98%;min-height:500px;">
                         <h4 class="card-title text-center text-warning">Promoting Equality</h4>
                             <img class="card-img-top" src="{{ asset('tabichi/images/main-slider/13.jpg')}}" style="border-radius:50%;" alt="Equality Image">
                             <div class="card-body">

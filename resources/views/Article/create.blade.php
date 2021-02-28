@@ -4,6 +4,8 @@
 
 
 <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=your_API_key"></script>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
 <script>
   tinymce.init({
     selector: '#body',
@@ -59,7 +61,7 @@
 
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Body <small><i>(required)</i></small></label>
-        <textarea id="body" name="body" rows="10" class="form-control {{$errors->has('body') ? 'is-valid' : ''}}">{{old('body')}}</textarea>
+        <textarea id="summary-ckeditor" name="body" rows="10" class="form-control {{$errors->has('body') ? 'is-valid' : ''}}">{{old('body')}}</textarea>
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Source <small><i>(optional)</i></small>
@@ -107,5 +109,8 @@
         });
       });
     });
+</script>
+<script>
+CKEDITOR.replace( 'summary-ckeditor' );
 </script>
 @endsection
