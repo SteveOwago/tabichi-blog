@@ -24,6 +24,7 @@
                 <th>Subject</th>
                 <th>Message</th>
                 <th>Sent On</th>
+                 <th>Delete</th>
             </tr>
             </thead>
             <tbody id="myTable">
@@ -36,6 +37,12 @@
                         <td>{{ $message->subject }}</td>
                         <td>{{ $message->message }}</td>
                         <td>{{ $message->created_at }}</td>
+                        <td>
+                                        <a href="{{ route('contact.delete', ['message' => $message->id]) }}"
+                                            class="btn btn-danger btn-circle">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
                     </tr>
                 @endforeach
 

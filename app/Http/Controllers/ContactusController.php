@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Contactus;
 
 class ContactusController extends Controller
@@ -88,11 +89,18 @@ class ContactusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(contactus $contactus)
     {
-            $id->delete();
-            return redirect()->back();
+        if(Auth::user()->isA('superadmin')){
+            
+            $contactus ->delete($contactus);
+            $this->FlashMessage('MessageDeleted', 'Your News has been deleted [ Subject: '. $contactus->subject . ', Email: '. $contactus->email . ' ]');
+            return redirect()->route('dashboard.home');
+        }
+         $this->FlashMessage('UnauthorisedUser', ' Unauthorised to Delete Message!');
+         return redirect()->back();
     }
+
 
     
 }

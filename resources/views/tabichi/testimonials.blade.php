@@ -35,8 +35,8 @@
 									<img src="images/resource/author-1.jpg" alt="" />
 								</div>
 							</div>
-							<h3>NAmes</h3>
-							<div class="title">inspired me to work harder</div>
+							<h3>Ms Serah</h3>
+							<div class="title">Inspirational</div>
 							<div class="text">I stopped believing in myself. But you guys never stopped believing in me. That is why I started believing in myself. Thank you, guys, for being such a nice family.</div>
 						</div>
 					</div>
@@ -51,9 +51,9 @@
 									<img src="images/resource/author-2.jpg" alt="" />
 								</div>
 							</div>
-							<h3>NAmes</h3>
-							<div class="title">inspired me to work harder</div>
-							<div class="text">I stopped believing in myself. But you guys never stopped believing in me. That is why I started believing in myself. Thank you, guys, for being such a nice family.</div>
+							<h3>Mr Calson</h3>
+							<div class="title">Collaborative</div>
+							<div class="text">One of the biggest benefits of working with Collaboration was the continued structure added to our business. Our management meetings are now structured, focused and shorter; they’re really making us think and be prepared for those meetings each week.</div>
 						</div>
 					</div>
 				</div>

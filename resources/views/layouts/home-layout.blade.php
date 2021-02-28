@@ -162,7 +162,7 @@
                     <div class="row clearfix">
 
                         <!--big column-->
-                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="big-column col-lg-12 col-md-12 col-sm-12">
                             <div class="row clearfix">
 
                                 <!--Footer Column-->
@@ -221,7 +221,7 @@
                                 </div>
 
                                 <!--Footer Column-->
-                                <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                {{-- <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                     <div class="footer-widget newsletter-widget">
                                         <h2>Newsletter</h2>
                                         <div class="text">Get Current Updates</div>
@@ -237,7 +237,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                             </div>
                         </div>

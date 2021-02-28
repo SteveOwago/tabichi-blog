@@ -133,44 +133,43 @@
         <div class="container-fluid">
 
             <div class="justify-content-center">
-               <div class="justify-content-center"> <h2>Our Programs</h2></div><hr><br>
+               <h2 class="text-center">Our Programs</h2><hr><br>
                 {{-- Card Column --}}
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:300px;">
-                        <h5 class="card-title text-center">Innovation Techcamps</h5>
-                            <img class="card-img-top"  style="border-radius:50%;" src="{{ asset('tabichi/images/main-slider/13.jpg')}}" alt="Card image cap">
+                        <div class="card" style="width: 30rem;min-height:500px;">
+                        <h4 class="card-title text-center text-warning">Innovation Techcamps</h4>
+                            <img class="card-img-top"  style="border-radius:50%;" src="{{ asset('tabichi/images/main-slider/15.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-warning">Learn More</a>
+                                <p class="card-text">TechCamp creates connections, sparks innovation, and empowers civil society to solve the world’s most pressing challenges through technology.
+                                 Through the techcamps, we teach eeducators to use technology as a tool to provide quality education within our communities. The innovation Techcamps by the Tabichi Foundation provides opportunities to young and creative learners to use Technology innnovatively to build and implement technology in daily activities.</p>
+                                <a href="{{route('tabichi.contact')}}" class="btn btn-warning">Inquire More</a>
                             </div>
                         </div>
                     </div>
                     {{-- Card Column --}}
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:300px;">
-                            <h5 class="card-title text-center">Social and Career Empowerment</h5>
-                            <img class="card-img-top"  style="border-radius:50%;"  src="{{ asset('tabichi/images/main-slider/13.jpg')}}" alt="Card image cap">
+                        <div class="card" style="width: 30rem;min-height:500px;">
+                            <h4 class="card-title text-center text-warning">Social and Career Empowerment</h4>
+                            <img class="card-img-top"  style="border-radius:50%;"  src="{{ asset('tabichi/images/main-slider/16.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-warning">Learn More</a>
+                                <p class="card-text">We inspire and nature social and career development mongst proffessionals. We focus on teaching young proffessionalon how to create and maintain their proffessional career network. ProffesonalNetworking is essential and it helps increating bonds between proffessional to share ideas and build each other. 
+                                Through our career mentorship program wecoach and teach on techniques of creating these networks.</p>
+                                <a href="{{route('tabichi.contact')}}" class="btn btn-warning">Inquire More</a>
                             </div>
                         </div>
                     </div>
                     {{-- Card Column --}}
                     <div class="col-md-4">
-                        <div class="card" style="width: 30rem;min-height:500px;max-height:500px;">
-                        <h5 class="card-title text-center">Promoting Equality</h5>
+                        <div class="card" style="width: 30rem;min-height:500px;">
+                        <h4 class="card-title text-center text-warning">Promoting Equality</h4>
                             <img class="card-img-top" src="{{ asset('tabichi/images/main-slider/13.jpg')}}" style="border-radius:50%;" alt="Equality Image">
                             <div class="card-body">
                                 
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-warning">Learn More</a>
+                                <p class="card-text">We focus in promoting euality in different sectors within both social and career/professional sectors. Ending violence against women and girls regardless the age and ability, ensuring  for  them access to justice, eliminatingdiscriminatory social norms and attitudes. Women’s voice, decision making at all levels as well asparticipation in both the public and private spheres. Access  to  decent  work,  elimination of gender-based  discrimination  in  employment,social protection,health  care,  qualitycare   for   children, full control of assets and incomes, elimination of social discrimination in acquisition of assets such ascredits, natural resourcesor through inheritance. Access to quality education at  all levels and life-long learning as well as safe and supportive learning environments.</p>
+                                <a href="{{route('tabichi.contact')}}" class="btn btn-warning">Inquire More</a>
                             </div>
                         </div>
                     </div>
@@ -202,7 +201,7 @@
                             <div class="feature-number">1</div>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="#residental-interior.html">STEAM Innovations </a></h3>
+                            <h3><a href="#">STEAM Innovations </a></h3>
                             <div class="text">Creating Annual SHTEAM Innovations Fair for showcasing and appreciating
                                 innovations towards achieving SDGs and 21st century skills.</div>
                         </div>
@@ -236,7 +235,7 @@
                             <div class="feature-number">3</div>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="#residental-interior.html">Scholarships</a></h3>
+                            <h3><a href="#">Scholarships</a></h3>
                             <div class="text">Providing scholarships allowing them to complete a full cycle of education and
                                 transition to the next level.</div>
                         </div>
@@ -253,7 +252,7 @@
                             <div class="feature-number">4</div>
                         </div>
                         <div class="lower-content">
-                            <h3><a href="#residental-interior.html">Digital Learning</a></h3>
+                            <h3><a href="#">Digital Learning</a></h3>
                             <div class="text">Promoting remote learning programs and create awareness of innovative skills.
                             </div>
                         </div>

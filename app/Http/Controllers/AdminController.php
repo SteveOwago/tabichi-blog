@@ -8,6 +8,7 @@ use App\article;
 use App\User;
 use App\Role;
 use App\category;
+use App\contactus;
 
 /**
  * this controller only for admin, in this controller admin can see all data in the blog.
@@ -39,7 +40,10 @@ class AdminController extends Controller
             $images = article::orderBy('created_at', 'desc')->get()->pluck('image');
             $imagesCount = $images->count();
 
-            return view('Admin.index', compact('articlesCount','articles', 'usersCount', 'catsCount', 'imagesCount'));
+            $messages = contactus::all();
+            $messagesCount = $messages->count();
+
+            return view('Admin.index', compact('articlesCount','articles', 'usersCount', 'catsCount', 'imagesCount', 'messages', 'messagesCount'));
         }
         // if the user is not a superadmin or an editor return abort 403
         else{

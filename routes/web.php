@@ -64,6 +64,7 @@ Route::get('/tabichi/testimonials', 'TabichiController@testimonials')->name('tab
 Route::get('/tabichi/about', 'TabichiController@about')->name('tabichi.about');
 // Route for contact us messages
 Route::get('/dashboard/messages', 'ContactusController@index')->name('contact.index');
+Route::get('/dashboard/{contactus}/delete', 'ContactusController@destroy')->name('contact.delete');
 
 Route::get('/new/index', 'NewController@index')->name('new.index');
 Route::get('/new/create', 'NewController@create')->name('new.create');
