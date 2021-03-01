@@ -3,7 +3,7 @@
 @section('title')
     {{$user->name}} - edit
 @endsection
-
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 @section('content')
     <h3>Edit Profile</h3>
     <hr>
@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label for="bio">{{ __('Bio') }} <small><i>(optional)</i></small></label>
-                    <textarea cols="20" rows="10" id="bio" type="text" class="form-control{{ $errors->has('bio') ? ' is-invalid' : '' }}" name="bio">{{ $user->bio }}</textarea>
+                    <textarea cols="20" rows="10" id="summary-ckeditor" type="text" class="form-control{{ $errors->has('bio') ? ' is-invalid' : '' }}" name="bio">{{ $user->bio }}</textarea>
             </div>
             <div class="form-group">
                             <label for="email">{{ __('Email') }}<small><i>(required)</i></small></label>
@@ -83,4 +83,8 @@
             <button type="submit" class="btn btn-primary">Update Profile</button>
     </form>
     <br><br><br><br><br><br>
+
+<script>
+CKEDITOR.replace( 'summary-ckeditor' );
+</script>
 @endsection
